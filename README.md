@@ -13,10 +13,23 @@ TODO
 
 * Support SOAP WSI
 * Support API2
+* Request timing & profiling
+
+Features
+--------
+
+* Enable/disable
+* Log view ACL and Enterprise logging support
+* Log responses by API path
+* Cron cleanup of old logs
 
 Installation
 ------------
 Copy repository contents in a Magento root directory. Clear cache and navigate to _System -> API Event Log_
+
+Configuration
+-------------
+In the Magento admin, see _System -> Configuration -> System / API Logging_
 
 Requirements
 ------------
