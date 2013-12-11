@@ -98,6 +98,6 @@ class Grommet_ApiLog_Adminhtml_ApiLogController extends Mage_Adminhtml_Controlle
 	 */
 	protected function _isAllowed ()
 	{
-		return Mage::getSingleton('admin/session')->isAllowed('admin/system/apilog');
+		return Mage::getSingleton('admin/session')->isAllowed('admin/system/api/apilog');
 	}
 }

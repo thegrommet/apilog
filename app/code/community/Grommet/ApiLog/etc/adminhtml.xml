@@ -3,12 +3,16 @@
 	<menu>
 		<system>
 			<children>
-				<apilog translate="title" module="apilog">
-					<title>API Event Log</title>
-					<sort_order>72</sort_order>
-					<depends><module>Grommet_ApiLog</module></depends>
-					<action>adminhtml/apilog</action>
-				</apilog>
+				<api>
+					<children>
+						<apilog translate="title" module="apilog">
+							<title>SOAP/XML-RPC - Request Log</title>
+							<sort_order>25</sort_order>
+							<depends><module>Grommet_ApiLog</module></depends>
+							<action>adminhtml/apilog</action>
+						</apilog>						
+					</children>
+				</api>
 			</children>
 		</system>
 	</menu>
@@ -18,9 +22,14 @@
 				<children>
 					<system>
 						<children>
-							<apilog translate="title" module="apilog">
-								<title>API Event Log</title>
-							</apilog>							
+							<api>
+								<children>
+									<apilog translate="title" module="apilog">
+										<title>SOAP/XML-RPC - Request Log</title>
+										<sort_order>25</sort_order>
+									</apilog>									
+								</children>
+							</api>						
 						</children>
 					</system>
 				</children>

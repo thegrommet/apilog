@@ -1,19 +1,19 @@
 <?php /* @var $this Grommet_ApiLog_Block_Adminhtml_Event_View */ ?>
 <?php $event = $this->getEvent() ?>
 <div class="content-header">
-    <h3 class="icon-head head-adminhtml-batch-rate"><?php echo $this->__('API Event Log ID %s', $event->getId()) ?></h3>
+    <h3 class="icon-head head-adminhtml-batch-rate"><?php echo $this->__('API Request Log ID %s', $event->getId()) ?></h3>
 	<p class="form-buttons"><button onclick="setLocation('<?php echo $this->getUrl('*/*/') ?>')" class="scalable back" type="button" title="Back" ><span><span><span><?php echo $this->__('Back') ?></span></span></span></button></p>
 </div>
 <div class="entry-edit event-details">
 	<div class="entry-edit-head">
-		<h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Event Details') ?></h4>
+		<h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Request Details') ?></h4>
 	</div>
 	<div class="fieldset">
 		<div class="hor-scroll">
 			<table cellspacing="0" class="form-list">
 				<tbody>
 					<tr>
-						<td class="label"><?php echo $this->__('Event Date') ?></td>
+						<td class="label"><?php echo $this->__('Request Date') ?></td>
 						<td class="value"><?php echo $this->formatDate($event->getTime(), 'long', true) ?></td>
 					</tr>
 					<tr>
@@ -56,7 +56,7 @@
 <?php if ($event->getArguments()): ?>
 <div class="entry-edit event-arguments">
 	<div class="entry-edit-head">
-		<h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Event Arguments') ?></h4>
+		<h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Request Arguments') ?></h4>
 	</div>
 	<div class="fieldset">
 		<div class="hor-scroll">
@@ -74,7 +74,7 @@
 <?php if ($event->getResponse()): ?>
 <div class="entry-edit event-response">
 	<div class="entry-edit-head">
-		<h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Event Response') ?></h4>
+		<h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Request Response') ?></h4>
 	</div>
 	<div class="fieldset">
 		<div class="hor-scroll">

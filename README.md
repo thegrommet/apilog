@@ -25,7 +25,7 @@ Features
 
 Installation
 ------------
-Copy repository contents in a Magento root directory. Clear cache and navigate to _System -> API Event Log_
+Copy repository contents in a Magento root directory. Clear cache and navigate to _System -> -> Web Services -> SOAP/XML-RPC - Request Log_
 
 Configuration
 -------------
