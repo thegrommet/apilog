@@ -1,7 +1,7 @@
 Grommet ApiLog
 ==============
 
-Magento module for logging SOAP and XMLRPC requests. An admin interface is provided to view logged requests.
+Magento module for logging SOAP and XMLRPC requests made to Magento's API. An admin interface is provided to view logged requests.
 
 Supported API types:
 
@@ -19,7 +19,7 @@ Features
 --------
 
 * Enable/disable
-* Log view ACL and Enterprise logging support
+* Log view ACL and Enterprise admin action logging support
 * Log responses by API path
 * Cron cleanup of old logs
 
