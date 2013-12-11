@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+	<adminhtml_apilog_index>
+		<reference name="content">
+			<block type="apilog/adminhtml_event" name="apilog_event" />
+		</reference>
+	</adminhtml_apilog_index>
+
+	<adminhtml_apilog_grid>
+		<update handle="formkey" />
+		<block type="apilog/adminhtml_event_grid" name="root" output="toHtml" />
+	</adminhtml_apilog_grid>
+
+	<adminhtml_apilog_view>
+		<reference name="content">
+			<block type="apilog/adminhtml_event_view" name="apilog_event_view" template="apilog/event/view.phtml" />
+		</reference>
+	</adminhtml_apilog_view>
+</layout>

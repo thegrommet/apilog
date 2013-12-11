@@ -1,0 +1,88 @@
+<?php /* @var $this Grommet_ApiLog_Block_Adminhtml_Event_View */ ?>
+<?php $event = $this->getEvent() ?>
+<div class="content-header">
+    <h3 class="icon-head head-adminhtml-batch-rate"><?php echo $this->__('API Event Log ID %s', $event->getId()) ?></h3>
+	<p class="form-buttons"><button onclick="setLocation('<?php echo $this->getUrl('*/*/') ?>')" class="scalable back" type="button" title="Back" ><span><span><span><?php echo $this->__('Back') ?></span></span></span></button></p>
+</div>
+<div class="entry-edit event-details">
+	<div class="entry-edit-head">
+		<h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Event Details') ?></h4>
+	</div>
+	<div class="fieldset">
+		<div class="hor-scroll">
+			<table cellspacing="0" class="form-list">
+				<tbody>
+					<tr>
+						<td class="label"><?php echo $this->__('Event Date') ?></td>
+						<td class="value"><?php echo $this->formatDate($event->getTime(), 'long', true) ?></td>
+					</tr>
+					<tr>
+						<td class="label"><?php echo $this->__('API Username') ?></td>
+						<td class="value"><?php echo $event->getUser() ?></td>
+					</tr>
+					<tr>
+						<td class="label"><?php echo $this->__('Adapter') ?></td>
+						<td class="value"><?php echo $event->getAdapterLabel() ?></td>
+					</tr>
+					<tr>
+						<td class="label"><?php echo $this->__('Path') ?></td>
+						<td class="value"><?php echo $event->getPath() ?></td>
+					</tr>
+					<tr>
+						<td class="label"><?php echo $this->__('Model') ?></td>
+						<td class="value"><?php echo $event->getModel() ?></td>
+					</tr>
+					<tr>
+						<td class="label"><?php echo $this->__('Status') ?></td>
+						<td class="value"><?php echo $event->getStatusLabel() ?></td>
+					</tr>
+					<?php if ($event->getFaultCode()): ?>
+						<tr>
+							<td class="label"><?php echo $this->__('Fault Code') ?></td>
+							<td class="value"><?php echo $event->getFaultCode() ?></td>
+						</tr>
+					<?php endif; ?>
+					<?php if ($event->getFaultMessage()): ?>
+						<tr>
+							<td class="label"><?php echo $this->__('Fault Message') ?></td>
+							<td class="value"><?php echo $event->getFaultMessage() ?></td>
+						</tr>
+					<?php endif; ?>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<?php if ($event->getArguments()): ?>
+<div class="entry-edit event-arguments">
+	<div class="entry-edit-head">
+		<h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Event Arguments') ?></h4>
+	</div>
+	<div class="fieldset">
+		<div class="hor-scroll">
+		<?php if (is_string($event->getArguments())): ?>
+			<?php echo $event->getArguments(); ?>
+		<?php elseif (is_array($event->getArguments())): ?>
+			<?php foreach ($event->getArguments() as $arg): ?>
+				<pre><?php print_r($arg) ?></pre><br />
+			<?php endforeach; ?>			
+		<?php endif; ?>
+		</div>
+	</div>
+</div>
+<?php endif; ?>
+<?php if ($event->getResponse()): ?>
+<div class="entry-edit event-response">
+	<div class="entry-edit-head">
+		<h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Event Response') ?></h4>
+	</div>
+	<div class="fieldset">
+		<div class="hor-scroll">
+			<pre><?php $event->getResponse() ?></pre>
+		</div>
+	</div>
+</div>
+<?php endif; ?>
+<style type="text/css">
+	.event-details table td.label { font-weight: bold; }
+</style>

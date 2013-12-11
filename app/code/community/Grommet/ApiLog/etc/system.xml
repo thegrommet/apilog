@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<sections>
+		<system>
+			<groups>
+				<apilog translate="label" module="apilog">
+					<label>API Logging</label>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<sort_order>550</sort_order>
+					<fields>
+						<enabled translate="label">
+							<label>Enabled</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+						</enabled>
+						<log_response translate="label">
+							<label>Log API Responses?</label>
+							<frontend_type>select</frontend_type>
+							<source_model>apilog/source::getLogResponseOptions</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<comment>Enabling this will potentially store large amounts of data.</comment>
+						</log_response>
+						<log_response_paths translate="label">
+							<label>Log API Responses by Path</label>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>22</sort_order>
+							<show_in_default>1</show_in_default>
+							<comment>Only used if response log is 'Log Responses by Path' above. Separate each path with a new line.</comment>
+						</log_response_paths>
+						<lifetime translate="label">
+							<label>Log Entry Lifetime, Days</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+						</lifetime>
+						<clean_schedule translate="label">
+							<label>Log Clean Cron Schedule</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>110</sort_order>
+							<show_in_default>1</show_in_default>
+						</clean_schedule>
+					</fields>
+				</apilog>
+			</groups>
+		</system>
+	</sections>
+</config>

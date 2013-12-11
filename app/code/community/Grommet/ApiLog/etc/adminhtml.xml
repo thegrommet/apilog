@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<menu>
+		<system>
+			<children>
+				<apilog translate="title" module="apilog">
+					<title>API Event Log</title>
+					<sort_order>72</sort_order>
+					<depends><module>Grommet_ApiLog</module></depends>
+					<action>adminhtml/apilog</action>
+				</apilog>
+			</children>
+		</system>
+	</menu>
+	<acl>
+		<reources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<apilog translate="title" module="apilog">
+								<title>API Event Log</title>
+							</apilog>							
+						</children>
+					</system>
+				</children>
+			</admin>
+		</reources>
+	</acl>
+</config>

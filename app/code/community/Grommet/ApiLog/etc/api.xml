@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<api>
+		<adapters>
+			<soap>
+				<label>SOAP</label>
+			</soap>
+			<soap_v2>
+				<label>SOAP V2</label>
+			</soap_v2>
+			<soap_wsi>
+				<label>SOAP WSI</label>
+			</soap_wsi>
+			<xmlrpc>
+				<label>XMLRPC</label>
+			</xmlrpc>
+		</adapters>
+	</api>
+</config>
