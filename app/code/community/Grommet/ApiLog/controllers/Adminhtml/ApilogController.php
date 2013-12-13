@@ -4,7 +4,7 @@
  *
  * @author tmannherz
  */
-class Grommet_ApiLog_Adminhtml_ApiLogController extends Mage_Adminhtml_Controller_Action
+class Grommet_ApiLog_Adminhtml_ApilogController extends Mage_Adminhtml_Controller_Action
 {
 
 	/**
